@@ -1,0 +1,4 @@
+global:
+  licensePlate: b07b69
+  imagePullSecrets:
+  - name: gh-registry-config

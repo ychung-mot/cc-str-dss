@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+body {
+    font-family: 'Roboto';
+    color: var(--text-color);
+    margin: 0;
+    --header-color: #bbbbbb55;
+    --sidebar-color: #ffffff;
+    --text-color: black;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .p-inputnumber {
+        .p-input-number-input {
+            width: 100%;
+        }
+    }
+}
