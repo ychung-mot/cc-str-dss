@@ -102,6 +102,7 @@ jobs:
         make upgrade \
         NAMESPACE=b07b69-dev \
         NAME=cc-str-dss-test \
+        ENV_NAME=test \
         IMAGE_TAG_FRONTEND=${vtag//v} \
         IMAGE_TAG_BACKEND=${vtag//v} \
       working-directory: ./helm/main
