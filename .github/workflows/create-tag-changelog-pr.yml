@@ -53,6 +53,7 @@ jobs:
         echo "git status - 0"
         git status
         echo "git status - 1"
+        git reset --hard
         ./node_modules/.bin/release-it ${{ steps.input.outputs.tag }} --only-version
 
     - name: Set output variables
