@@ -83,7 +83,7 @@ jobs:
             body: `### Commits
           ${{ steps.vars.outputs.pr_body }}
           ### GitHub Action
-          - [Build and deploy Apps in Test Environment](https://github.com/bcgov-c/SAWSx/actions/workflows/deploy-test.yml)
+          - [Build and deploy Apps in Test Environment](https://github.com/cc-str-dss/actions/workflows/deploy-test.yml)
           `,
           });
 
