@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "0.0.0",
+  "version": "4.100.5",
   "scripts": {
     "ng": "ng",
     "dev": "ng serve  --proxy-config proxy.conf.json",
