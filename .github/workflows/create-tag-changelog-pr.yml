@@ -5,7 +5,7 @@ on:
     inputs:
       tag:
         type: string
-        description: Tag Version (excl. prefix; e.g. 1.2.3)
+        description: Tag Version (exclude prefix; e.g. 1.2.3)
         required: true
 
 jobs:
