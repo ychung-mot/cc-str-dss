@@ -33,6 +33,10 @@ Upon validation, the GeoCoder returns latitude and longitude coordinates associa
 
 Users can explore a dynamic geospatial map within the application, providing a visually intuitive representation of the geographical locations associated with the captured data. The map is powered by the validated coordinates, ensuring real-world accuracy and up-to-date spatial information.
 
+### CI/CD Pipeline
+
+Utilized Helm Chart and Github Actions for build and deployment to Openshift
+
 ## Conclusion:
 
 Together, these features create a robust and user-friendly environment, combining secure authentication, fine-grained authorization, and a visually informative geospatial mapping experience.

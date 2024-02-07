@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"fdf5df_deployer","Source":"registry.terraform.io/bcgov/openshift/deployer","Version":"0.11.0","Dir":".terraform/modules/fdf5df_deployer"}]}
