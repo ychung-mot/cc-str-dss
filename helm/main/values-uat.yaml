@@ -1,0 +1,61 @@
+global:
+  env:
+    'LOGGING__LOGLEVEL__DEFAULT': 'Error'
+    'LOGGING__LOGLEVEL__AWP': 'Information'
+    'ASPNETCORE_ENVIRONMENT': 'Development'
+    'Env': 'uat'
+    'AppBaseUrl': 'https://uat-cc-str-dss.apps.advsol-ams.3j6z.p1.openshiftapps.com'
+
+nameOverride: cc-str-dss-uat
+fullnameOverride: cc-str-dss-uat
+
+route:
+  host: uat-cc-str-dss.apps.advsol-ams.3j6z.p1.openshiftapps.com
+  baseService: cc-str-dss-uat
+
+frontend:
+  enabled: true
+  replicaCount: 3
+  nameOverride: cc-str-dss-uat-frontend
+  fullnameOverride: cc-str-dss-uat-frontend
+
+  resources:
+  limits:
+    cpu: 50m
+    memory: 100Mi
+  requests:
+    cpu: 20m
+    memory: 50Mi
+
+  env:
+    'SSO_CLIENT': 'advsol-public'
+    'SSO_REALM': 'master'
+    'SSO_HOST': 'https://keycloak-b07b69-dev.apps.advsol-ams.3j6z.p1.openshiftapps.com/auth'
+    'APP_ENV': 'uat'
+
+backend:
+  enabled: true
+  replicaCount: 3
+  nameOverride: cc-str-dss-uat-backend
+  fullnameOverride: cc-str-dss-uat-backend
+
+  postgresSecret: cc-str-dss-uat-postgres
+
+  resources:
+    limits:
+      cpu: 1500m
+      memory: 1500Mi
+    requests:
+      cpu: 20m
+      memory: 1100Mi
+
+  env:
+    'JWT__Authority': 'https://keycloak-b07b69-dev.apps.advsol-ams.3j6z.p1.openshiftapps.com/auth/realms/master'
+    'JWT__Audience': 'advsol-public'
+    'DB_HOST': 'cc-str-dss-uat-postgres'
+    'DB_USER': 'postgres'
+    'DB_NAME': 'postgres'
+
+postgresql:
+  nameOverride: cc-str-dss-uat-postgres
+  fullnameOverride: cc-str-dss-uat-postgres
