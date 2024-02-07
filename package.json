@@ -10,5 +10,5 @@
     "conventional-changelog-cli": "^4.1.0",
     "release-it": "^16.1.5"
   },
-  "version": "4.100.4"
+  "version": "4.100.5"
 }
