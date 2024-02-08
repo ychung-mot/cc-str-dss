@@ -1,0 +1,12 @@
+primary:
+  podSecurityContext:
+    enabled: false
+  containerSecurityContext:
+    enabled: false
+  persistence:
+    size: 1Gi
+readReplicas:
+  persistence:
+    size: 1Gi
+nameOverride: cc-str-dss-prod-postgres
+fullnameOverride: cc-str-dss-prod-postgres
