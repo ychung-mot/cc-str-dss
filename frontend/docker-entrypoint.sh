@@ -12,7 +12,7 @@ cat >/nginx/nginx.conf <<EOL
 
 #add_header content-security-policy "default-src 'self'; style-src 'self' 'nonce-${STYLE_NONCE}'; frame-src loginproxy.gov.bc.ca dev.loginproxy.gov.bc.ca test.loginproxy.gov.bc.ca; connect-src 'self' loginproxy.gov.bc.ca dev.loginproxy.gov.bc.ca test.loginproxy.gov.bc.ca server.arcgisonline.com; img-src 'self' data: server.arcgisonline.com www.w3.org; frame-ancestors https://loginproxy.gov.bc.ca https://dev.loginproxy.gov.bc.ca https://test.loginproxy.gov.bc.ca; object-src 'none'; base-uri 'self'; form-action 'self';";
 
-add_header content-security-policy "default-src 'self'; style-src 'unsafe-inline'; frame-src loginproxy.gov.bc.ca dev.loginproxy.gov.bc.ca test.loginproxy.gov.bc.ca; connect-src 'self' loginproxy.gov.bc.ca dev.loginproxy.gov.bc.ca test.loginproxy.gov.bc.ca server.arcgisonline.com; img-src 'self' data: server.arcgisonline.com www.w3.org; frame-ancestors https://loginproxy.gov.bc.ca https://dev.loginproxy.gov.bc.ca https://test.loginproxy.gov.bc.ca; object-src 'none'; base-uri 'self'; form-action 'self';";
+add_header content-security-policy "default-src 'self'; style-src 'unsafe-inline' 'style-src-elem'; frame-src loginproxy.gov.bc.ca dev.loginproxy.gov.bc.ca test.loginproxy.gov.bc.ca; connect-src 'self' loginproxy.gov.bc.ca dev.loginproxy.gov.bc.ca test.loginproxy.gov.bc.ca server.arcgisonline.com; img-src 'self' data: server.arcgisonline.com www.w3.org; frame-ancestors https://loginproxy.gov.bc.ca https://dev.loginproxy.gov.bc.ca https://test.loginproxy.gov.bc.ca; object-src 'none'; base-uri 'self'; form-action 'self';";
 
 
 location /__networkchecker {
