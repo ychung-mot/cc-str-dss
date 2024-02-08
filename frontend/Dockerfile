@@ -14,7 +14,9 @@ RUN npm run build --prod
 ARG style_nonce
 
 RUN echo ${style_nonce}
-RUN sed -i -e "s|<script|<script nonce=${style_nonce}|g" -e "s|<link|<link nonce=${style_nonce}|g" /app/dist/frontend/browser/index.html
+# RUN sed -i -e "s|<script|<script nonce=${style_nonce}|g" -e "s|<link|<link nonce=${style_nonce}|g" /app/dist/frontend/browser/index.html
+
+RUN sed -i -e "s|<script|<script nonce=test|g" -e "s|<link|<link nonce=test|g" /app/dist/frontend/browser/index.html
 
 FROM nginx:stable-alpine as builder-modules
 
