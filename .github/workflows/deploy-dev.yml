@@ -62,10 +62,6 @@ jobs:
     - name: Setup Tools
       uses: ./.github/actions/setup-tools
 
-    # - name: Replace STYLE_NONCE in vite.config.ts
-    #   run: |
-    #     sed -i "s/__STYLE_NONCE__/$(echo -n ${{ github.sha }} | base64)/" frontend/vite.config.ts
-
     - name: Build and Push
       uses: egose/actions/docker-build-push@04830c07edee3c552f2c5a0330a674ff0d366c66
       with:
@@ -77,6 +73,7 @@ jobs:
         docker-file: frontend/Dockerfile
         docker-args: |
           generate_sourcemap=true
+          style_nonce=$(echo -n ${{ github.sha }} | base64)
         metadata-tags: |
           type=ref,event=branch
           type=sha,format=long,prefix=,suffix=

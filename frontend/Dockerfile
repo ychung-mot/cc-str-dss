@@ -10,6 +10,10 @@ COPY . .
 
 RUN npm run build --prod
 
+# Add a step to modify index.html
+ARG style_nonce
+RUN sed -i -e "s|<script|<script nonce=${style_nonce}|g" -e "s|<link|<link nonce=${style_nonce}|g" /app/dist/frontend/browser/index.html
+
 FROM nginx:stable-alpine as builder-modules
 
 # Ensure that the version of nginx of the builder image is compatible with the nginx version of the main image.
