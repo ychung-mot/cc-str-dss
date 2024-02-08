@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/ychung-mot/cc-str-dss/compare/v1.0.3...v1.0.4) (2024-02-07)
+
+
+### Docs
+
+* CI/CD pipeline ([ee6c29c](https://github.com/ychung-mot/cc-str-dss/commit/ee6c29cb6a999a7a854d577e5ee2da7270889c3f))
+
 ## [1.0.3](https://github.com/ychung-mot/cc-str-dss/compare/v1.0.2...v1.0.3) (2024-02-07)
 
 
