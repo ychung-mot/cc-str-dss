@@ -1,18 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map, shareReplay } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommonCodesApiService {
   private readonly apiUrl = `api`;
 
-  constructor(private httpClient: HttpClient) {
-  }
+  constructor(private httpClient: HttpClient) {}
 
   getCommonCodes(): Observable<any> {
-    return this.httpClient.get(`${this.apiUrl}/commoncodes`)
+    return this.httpClient.get(`${this.apiUrl}/commoncodes`).pipe(
+      map((res) => res),
+      shareReplay(),
+    );
   }
-
 }
