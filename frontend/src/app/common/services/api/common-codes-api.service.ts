@@ -11,9 +11,6 @@ export class CommonCodesApiService {
   constructor(private httpClient: HttpClient) {}
 
   getCommonCodes(): Observable<any> {
-    return this.httpClient.get(`${this.apiUrl}/commoncodes`).pipe(
-      map((res) => res),
-      shareReplay(),
-    );
+    return this.httpClient.get(`${this.apiUrl}/commoncodes`).pipe(shareReplay());
   }
 }
