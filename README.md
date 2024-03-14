@@ -1,6 +1,6 @@
 # Housing Code Challenge : Short Term Rental Data Sharing System
 
-This project is for the purposes of the Ministry of Housing Code Challenge where an Open Geo-spatial Consortium (OGC) compliant web map
+...This project is for the purposes of the Ministry of Housing Code Challenge where an Open Geo-spatial Consortium (OGC) compliant web map
 application for managing property owner requests for short-term rental status...
 
 
