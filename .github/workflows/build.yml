@@ -46,11 +46,11 @@ jobs:
         run: dotnet test ./server/AdvSol.sln --no-build
 
       # SonarQube integration for backend
-      - name: SonarQube Scan Backend
-        uses: sonarsource/sonarcloud-github-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      # - name: SonarQube Scan Backend
+      #   uses: sonarsource/sonarcloud-github-action@v2
+      #   env:
+      #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   build-frontend:
     runs-on: ubuntu-22.04
@@ -87,8 +87,8 @@ jobs:
         run: cp -r ./coverage ./frontend/test-results
 
       # SonarQube integration for frontend
-      - name: SonarQube Scan Frontend
-        uses: sonarsource/sonarcloud-github-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      # - name: SonarQube Scan Frontend
+      #   uses: sonarsource/sonarcloud-github-action@v2
+      #   env:
+      #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
