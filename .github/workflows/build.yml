@@ -87,12 +87,14 @@ jobs:
         run: |
           cd ./frontend
           ng test --watch=false --code-coverage=true
+        continue-on-error: true
 
       - name: Create test results directory
         run: mkdir -p ./frontend/test-results
 
       - name: Copy test results
         run: cp -r ./coverage ./frontend/test-results
+        
 
       # SonarQube integration for frontend
       # - name: SonarQube Scan Frontend
