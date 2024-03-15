@@ -75,10 +75,13 @@ jobs:
         run: npm install
 
       - name: Change directory
-        run: cd ./frontend
+        run: |
+          pwd
+          cd ./frontend
+          ng build --configuration=production
       
-      - name: Build frontend
-        run: ng build --configuration=production
+      # - name: Build frontend
+      #   run: ng build --configuration=production
 
       - name: Run frontend tests
         run: ng test --watch=false --code-coverage=true
