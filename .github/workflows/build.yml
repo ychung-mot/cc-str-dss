@@ -96,8 +96,8 @@ jobs:
         run: cp -r ./coverage ./frontend/test-results
         
 
-     # SonarQube integration for backend
-      - name: SonarQube Scan Backend
+     # SonarQube integration for frontend
+      - name: SonarQube Scan Frontend
         uses: sonarsource/sonarcloud-github-action@v2
         env:
           SONAR_HOST_URL: https://sonarcloud.io
