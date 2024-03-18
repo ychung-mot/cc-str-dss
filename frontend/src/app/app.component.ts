@@ -22,5 +22,6 @@ import { StoreService } from './common/services/store.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  title = 'CodeChallengeBC';
   constructor(private _storeService: StoreService) { }
 }
